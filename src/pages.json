@@ -1,0 +1,167 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// 首页页面
+		{
+			"path": "pages/tabbar/home/home",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 0,
+				"backgroundColorTop": "#f7f7f7"
+			}
+		},
+		// 分类页面
+		{
+			"path": "pages/tabbar/category/category",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		// 购物车页面
+		{
+			"path": "pages/tabbar/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		// 我的页面
+		{
+			"path": "pages/tabbar/user/user",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		// 商品详情页
+		{
+			"path": "pages/xiangqingye/xiangqingye",
+			"style": {
+				"navigationBarTitleText": "商品详情页"
+			}
+		},
+		// 登陆页
+		{
+			"path": "pages/denglu/denglu",
+			"style": {
+				"navigationBarTitleText": "登陆"
+			}
+		},
+		// 商品列表页
+		{
+			"path": "pages/shangpinliebiao/shangpinliebiao",
+			"style": {
+				"navigationBarTitleText": "商品列表"
+			}
+		},
+		// 个人信息
+		{
+			"path": "pages/gerenxinxi/gerenxinxi",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			}
+		},
+		// 修改昵称
+		{
+			"path": "pages/gerenxinxi/name",
+			"style": {
+				"navigationBarTitleText": "修改昵称"
+			}
+		},
+		// 修改宣言
+		{
+			"path": "pages/gerenxinxi/xuanyan",
+			"style": {
+				"navigationBarTitleText": "修改宣言"
+			}
+		},
+		// 修改手机
+		{
+			"path": "pages/gerenxinxi/shouji",
+			"style": {
+				"navigationBarTitleText": "修改手机"
+			}
+		},
+		// 管理收货地址
+		{
+			"path": "pages/shouhuo/address",
+			"style": {
+				"navigationBarTitleText": "管理收货地址"
+			}
+		},
+		// 添加收货地址
+		{
+			"path": "pages/shouhuo/add",
+			"style": {
+				"navigationBarTitleText": "收货地址"
+			}
+		},
+		// 修改收货地址
+		{
+			"path": "pages/shouhuo/addup",
+			"style": {
+				"navigationBarTitleText": "修改地址"
+			}
+		},
+		// 结算
+		{
+			"path":"pages/tabbar/cart/ceshi",
+			"style": {
+				"navigationBarTitleText": "确认订单"
+			}
+		},
+		// 全部订单
+		{
+			"path":"pages/tabbar/cart/one",
+			"style": {
+				"navigationBarTitleText": "确认订单"
+			}
+		}
+	
+
+
+
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+		// "usingComponents":{
+			  
+		// 	    "van-goods-action": "/wxcomponents/vant/dist/goods-action/index",
+		// 	    "van-goods-action-icon": "/wxcomponents/vant/dist//goods-action-icon/index",
+		// 	    "van-goods-action-button": "/wxcomponents/vant/dist//goods-action-button/index"
+		// }	
+
+	},
+	"tabBar": {
+		"color": "#C0C4CC",
+		"selectedColor": "#ff536f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/tabbar/home/home",
+				"iconPath": "static/tabbar/tab-home.png",
+				"selectedIconPath": "static/tabbar/tab-home-current.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabbar/category/category",
+				"iconPath": "static/tabbar/tab-cate.png",
+				"selectedIconPath": "static/tabbar/tab-cate-current.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/tabbar/cart/cart",
+				"iconPath": "static/tabbar/tab-cart.png",
+				"selectedIconPath": "static/tabbar/tab-cart-current.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/tabbar/user/user",
+				"iconPath": "static/tabbar/tab-user.png",
+				"selectedIconPath": "static/tabbar/tab-user-current.png",
+				"text": "我的"
+			}
+		]
+	}
+}
