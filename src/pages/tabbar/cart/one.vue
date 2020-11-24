@@ -1,73 +1,204 @@
 <template>
 	<view class="page">
-		<view style=" background-color: #F3F3F3;">
-			<aaa :tabBars="tabBars"@onTabTap="onTabTap"></aaa>
-		</view>
-		<view style="padding-top: 100rpx;">{{ value }}</view>
+		<van-tabs :active="active">
+			<van-tab title="全部">
+				<view class="shop size12">
+					<view class="shoptitle">
+						<view class="size14">
+							2020/11/24 10:24:26
+						</view>
+						<view class="size14 red">
+							待付款
+						</view>
+					</view>
+
+					<view class="shopitem">
+						<view class="shopitemimg">
+							<image src="../../../static/category/R2.png"></image>
+						</view>
+						<view class="shopname">
+							<view style="margin-top: 20rpx;">名字名字名字名字名字名字名字名字</view>
+							<view class="huise">规格规格</view>
+						</view>
+						<view class="shopmoney">
+							<view style="margin-top: 20rpx;">$55.5</view>
+							<view class="huise">x1</view>
+						</view>
+					</view>
+					<view class="allmoney size14" >
+						<view class="allmoneytop">
+							<view style="float: right; line-height: 50rpx;">
+								共计<span>1</span>件 应付金额：<span class="red">$66.66</span>
+							</view>
+
+						</view>
+						<view class="allmoneybuttom">
+							<view class="alldelect">
+								更多
+							</view>
+							<view class="gomoney">
+								立即付款
+							</view>
+						</view>
+
+					</view>
+				</view>
+			</van-tab>
+			<van-tab title="待付款">
+				<view class="shop size12">
+					<view class="shoptitle">
+						<view class="size14">
+							2020/11/24 10:24:26
+						</view>
+						<view class="size14 red">
+							待付款
+						</view>
+					</view>
+				
+					<view class="shopitem">
+						<view class="shopitemimg">
+							<image src="../../../static/category/R2.png"></image>
+						</view>
+						<view class="shopname">
+							<view style="margin-top: 20rpx;">名字名字名字名字名字名字名字名字</view>
+							<view class="huise">规格规格</view>
+						</view>
+						<view class="shopmoney">
+							<view style="margin-top: 20rpx;">$55.5</view>
+							<view class="huise">x1</view>
+						</view>
+					</view>
+					<view class="allmoney size14" >
+						<view class="allmoneytop">
+							<view style="float: right; line-height: 50rpx;">
+								共计<span>1</span>件 应付金额：<span class="red">$66.66</span>
+							</view>
+				
+						</view>
+						<view class="allmoneybuttom">
+							<view class="alldelect">
+								更多
+							</view>
+							<view class="gomoney">
+								立即付款
+							</view>
+						</view>
+				
+					</view>
+				</view>
+			</van-tab>
+			<van-tab title="待发货">待发货</van-tab>
+			<van-tab title="待收货">待收货</van-tab>
+			<van-tab title="待评论">待评论</van-tab>
+			<van-tab title="已退款">已退款</van-tab>
+		</van-tabs>
+
 	</view>
 </template>
 
 <script>
-  import aaa from "./scroll.vue"
-export default {
-	data() {
-		return {
-			num:0,
-			value: '',
-			tabBars: [
-				{
-					name: '全部',
-					id: '1'
-				},
-				{
-					name: '待付款',
-					id: '2'
-				},
-				{
-					name: '待发货',
-					id: '3'
-				},
-				{
-					name: '待收货',
-					id: '4'
-				},
-				{
-					name: '待评论',
-					id: '5'
-				},
-				{
-					name: '退款',
-					id: '6'
-				}
-			]
-		};
-	},
-	onLoad(e) {
-		this.num=Number(e.type)
-		console.log(e,this.num)
-		// this.num=e.type
-		// this.$set(this.num,e.type)
-		// console.log(this.num)
-		this.value = JSON.stringify(this.tabBars[0]);
-	},
-	onShow(){
-		console.log(this.$store.state.type,66666666666)
-	},
-	methods: {
-		onTabTap(item) {
-			console.log('item: ' + JSON.stringify(item));
-			this.value = JSON.stringify(item);
+	export default {
+		data() {
+			return {
+				active: 0,
+			};
+		},
+		onLoad(e) {
+
+		},
+		onShow() {
+			this.active = this.$store.state.type
+		},
+		methods: {
+
+		},
+		components: {
+
 		}
-	},
-	components:{
-		aaa
-	}
-};
+	};
 </script>
 
 <style>
-page {
-	width: 100%;
-	height: 100%;
-}
+	.red{
+		color: #C7604F;
+	}
+	page {
+		width: 100%;
+		height: 100%;
+		background-color: #EFEFEF;
+	}
+
+	.gomoney {
+		width: 20%;
+		height: 50rpx;
+		background-color: #BA2313;
+		color: #FFFFFF;
+		line-height: 50rpx;
+		text-align: center;
+		border-radius: 20rpx;
+	}
+
+	.allmoneybuttom {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.allmoneytop {
+		width: 100%;
+		height: 50rpx;
+	}
+
+	.allmoney {
+		width: 100%;
+		height: 100rpx;
+		/* border-bottom: 1px solid darkgrey; */
+	}
+
+	.shop {
+		padding: 10px;
+		background-color: #FFFFFF;
+	}
+
+	.shoptitle {
+		width: 100%;
+		height: 80rpx;
+		border-bottom: 1px solid #EEEEEE;
+		line-height: 80rpx;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.shopitem {
+		width: 100%;
+		height: 200rpx;
+		border-bottom: 1px solid #EEEEEE;
+	}
+
+	.shopitem {
+		width: 100%;
+		display: flex;
+	}
+
+	.shopitemimg {
+		width: 30%;
+		height: 200rpx;
+	}
+
+	.shopitemimg>image {
+		width: 100%;
+		height: 80%;
+	}
+
+	.shopname {
+		width: 50%;
+		height: 200rpx;
+	}
+
+	.shopmoney {
+		text-align: center;
+		/* float: right; */
+		width: 20%;
+		height: 200rpx;
+	}
 </style>

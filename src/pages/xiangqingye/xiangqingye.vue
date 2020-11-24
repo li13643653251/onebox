@@ -21,7 +21,7 @@
 					</view>
 					<view class="leftimg" v-for="(item,index) in skuInfoEntities" :key="index">
 						<img :src="item.skuDefaultImg" alt="">
-						<p>{{item.price}}/瓶</p>
+						<p class="size14">{{item.price}}/瓶</p>
 					</view>
 					<!-- <view class="leftimg">
 						<img src="../../static/category/R5.png" alt="">
@@ -31,13 +31,13 @@
 			</view>
 
 			<view class="xiangqingyevip">
-				<p class="mix-icon icon-shoujihaoma "></p>
-				<p>现在升级尊v，最高可得佣金<span>50</span>元</p>
-				<p class="mix-icon icon-you" style="float: right;"></p>
+				<view class="mix-icon icon-shoujihaoma "></view>
+				<view >现在升级尊v，最高可得佣金<span>50</span>元</view>
+				<view class="mix-icon icon-you" style="float: right;"></view>
 			</view>
 			<view class="blacktext">
-				<p class="mix-icon icon-shoujihaoma "></p>
-				<p style="color: #FFFFFF;">下单后三个工作日内发货</p>
+				<view class="mix-icon icon-shoujihaoma "></view>
+				<view style="color: #FFFFFF;" class="size12">下单后三个工作日内发货</view>
 			</view>
 			<view class="shoptitle">
 				<p>【双十一 狂欢季】Laneige 兰芝果冻夜间修护 睡眠唇膜韩国正品送迪迈诗隔离霜</p>
@@ -47,56 +47,112 @@
 		<!-- 配送 -->
 		<view class="peisong">
 
-			<p>配送:</p>
+			<p class="size14"> 配 送 :  至</p>
 			<!-- <p> -->
 			<img src="../../static/icon-address.png" style="width: 40rpx; height: 40rpx; margin-top: 15px;" alt="">
 
 			<!-- </p> -->
 			<!--<img src="../../peisong/static/icon-address.png" alt="" style="width: 15px;">-->
-			<p>房山区</p>
+			<p  class="size14"> 你的  </p>
 		</view>
 		<view class="bupeisong">
-			<p>不发货地区不发货地区不发货地区不发货地区不发货地区不发货地区不发货地区不发货地区不发货地区不发货地区不发货地区不发货地区不发货地区不发货地区</p>
+			<view  class="size12">
+				不发货地区：内蒙古自治区，黑龙江省，海南省，西藏自治区，甘肃省，青海省，
+				宁夏回族自治区，新疆维吾尔自治区，台湾省，香港特别行政区，澳门特别行政区
+				
+				</view>
 		</view>
 		<!-- 保障 -->
 		<view class="baozhang">
-			<p @click="open('bottom')">保障正品保障○全场包邮○买贵就赔○7天无理由 <span class="mix-icon icon-you" style="float: right;"></span></p>
+			<view class="size14" @click="open('bottom')">保障: <span style="margin-left: 10%;">正品保障  ○全场包邮  ○买贵就赔  ○7天无理由 </span> <span class="mix-icon icon-you" style="float: right;"></span></view>
 		</view>
 		<!-- msak -->
 		<amask :open="openPopup" :position="position" :background="background" :percent="percent" @close="unonpen">
-			<!-- <li>正品保障</li>
-			<li>正品保障</li>
-
-			<li>正品保障</li>
-			<li>正品保障</li>
-			<li>正品保障</li>
-			<li>正品保障</li> -->
-			<li v-for="(item,index) in baozhang" :key="index">{{item}}</li>
+			<view class="fuwubaozhang">
+				<view class="fuwubaozhangtop">
+					商品服务保障
+				</view>
+				<view class="fuwubaozhanglist">
+					<view class="fwbzitem">
+						<view class="size14">
+							<span class="mix-icon icon-xuanzhong"></span>
+							<span>
+								正品保障
+							</span>
+						</view>
+						<view class="fwbzbottom size12">
+							<span class="huise">
+								爱美蛙淘在平台所售的商品为“正品”
+							</span>
+						</view>
+					</view>
+					<view class="fwbzitem">
+						<view class="size14">
+							<span class="mix-icon icon-xuanzhong"></span>
+							<span>
+								全场包邮
+							</span>
+						</view>
+						<view class="fwbzbottom size12">
+							<span class="huise">
+								爱美蛙淘支持全国包邮，无需承担邮费，港澳台和偏远地区（如新疆，西藏，内蒙古等）以及页面特殊说明的除外。
+							</span>
+						</view>
+					</view>
+					<view class="fwbzitem">
+						<view class="size14">
+							<span class="mix-icon icon-xuanzhong"></span>
+							<span>
+								买贵就赔
+							</span>
+						</view>
+						<view class="fwbzbottom size12">
+							<span class="huise">
+								爱美蛙淘承诺，买贵双倍赔差价
+							</span>
+						</view>
+					</view>
+					<view class="fwbzitem">
+						<view class="size14">
+							<span class="mix-icon icon-xuanzhong"></span>
+							<span>
+								7天无理由退款
+							</span>
+						</view>
+						<view class="fwbzbottom size12">
+							<span class="huise">
+								消费者在满足7天无理由退货申请条件的前提下，可以提出“7天无理由退货”的申请
+							</span>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- <li v-for="(item,index) in baozhang" :key="index">{{item}}</li> -->
 
 
 		</amask>
 		<!-- 起售说明 -->
 		<view class="qishoushuoming">
-			<p>起售说明：</p>
-			<p>本件商品<span>1</span>件起售</p>
+			<view class="size14">起售说明：</view>
+			<view class="size14">本件商品<span>1</span>件起售</view>
 		</view>
 		
 		<!-- 商品评价 -->
 		<view class="pingjia">
 			<view class="pingjiatitle">
-				<p>商品评价：</p>
+				<p class="size14">商品评价：</p>
 				<p style="color:#612335 ;">好评<span>1</span>% <span class="mix-icon icon-you"></span></p>
 			</view>
 			<scroll-view scroll-x="true">
 				<view class="pingjiaitem">
-				<!-- 	<view class="itemimg">
+		<!-- 			<view class="itemimg">
 						<view style="display: flex; ">
 							<img style="width: 30px; height: 30px;" src="../../static/category/R2.png" alt="">
 							<p style="line-height: 30px;">名称名称名称</p>
 						</view>
 						<view>
 							<span>
-								好评好评好好评好评好评好评好评好评好评好评好评好评好评好好评好评好好评好评好评好评好评好评好评好评好评好评好评好
+								好评好评好好评好评好评好评好评好评好评好评好评好评好评好好评好评好好评好评
 							</span>
 						</view>
 					</view>
@@ -107,7 +163,7 @@
 						</view>
 						<view>
 							<span>
-								好评好评好好评好评好评好评好评好评好评好评好评好评好评好好评好评好好评好评好评好评好评好评好评好评好评好评好评好
+								好评好评好好评好评好评好评好评好评好评好评好评好评好评好好评好评
 							</span>
 						</view>
 					</view>
@@ -118,56 +174,24 @@
 						</view>
 						<view>
 							<span>
-								好评好评好好评好评好评好评好评好评好评好评好评好评好评好好评好评好好评好评好评好评好评好评好评好评好评好评好评好
-							</span>
-						</view>
-					</view>
-					<view class="itemimg">
-						<view style="display: flex; ">
-							<img style="width: 30px; height: 30px;" src="../../static/category/R2.png" alt="">
-							<p style="line-height: 30px;">名称名称名称</p>
-						</view>
-						<view>
-							<span>
-								好评好评好好评好评好评好评好评好评好评好评好评好评好评好好评好评好好评好评好评好评好评好评好评好评好评好评好评好
-							</span>
-						</view>
-					</view>
-					<view class="itemimg">
-						<view style="display: flex; ">
-							<img style="width: 30px; height: 30px;" src="../../static/category/R2.png" alt="">
-							<p style="line-height: 30px;">名称名称名称</p>
-						</view>
-						<view>
-							<span>
-								好评好评好好评好评好评好评好评好评好评好评好评好评好评好好评好评好好评好评好评好评好评好评好评好评好评好评好评好
-							</span>
-						</view>
-					</view>
-					<view class="itemimg">
-						<view style="display: flex; ">
-							<img style="width: 30px; height: 30px;" src="../../static/category/R2.png" alt="">
-							<p style="line-height: 30px;">名称名称名称</p>
-						</view>
-						<view>
-							<span>
-								好评好评好好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评好评
+								好评好评好好评好评好评好评好评好评好评好评好评好评好评好好评好评好好评好评好评
 							</span>
 						</view>
 					</view> -->
 
-					<!-- <div style="clear: both;"></div> -->
+					<div style="clear: both;"></div>
 				</view>
 			</scroll-view>
 
 		</view>
-		<button @click="openshop('bottom')">按钮</button>
+		<!-- <button @click="openshop('bottom')">按钮</button> -->
 		<!-- 为你推荐 -->
 		<view class="tuijian">
-			<view class="tuijiantitle">○ 为你推荐 ○</view>
-			<view class="tuijianimg">
+		   <view class="tuijiantitle">○ 为你推荐 ○</view>
+		   <image style="width: 100%;" v-for="(item,index) in spuInfoDescEntities" :src="item" alt="" :key="index">
+		<!-- 	<view class="tuijianimg" v-if="spuInfoDescEntities">
 				<img v-for="(item,index) in spuInfoDescEntities" :src="item" alt="" :key="index">
-			</view>
+			</view> -->
 		</view>
 		<!-- 规格布局 -->
 		<amask :open="keyshop" :position="position" :background="background" :percent="percent" @close="unonpenshop">
@@ -213,8 +237,7 @@
 				<view class="confirm-btn container" @click="lijigoumai()">立即购买</view>
 			</view>
 		</amask>
-
-				<van-goods-action>
+		<van-goods-action>
 			<van-goods-action-icon icon="chat-o" text="客服" @click="onClickIcon" />
 			<van-goods-action-icon icon="cart-o" text="购物车" @click="onClickButton" />
 			<van-goods-action-button text="加入购物车" type="warning" @click="onClickIcon"/>
@@ -351,6 +374,7 @@
 					console.log(res, 111111)
 					this.swiperitem = res.spuImagesEntities //轮播图
 					this.spuInfoDescEntities = res.spuInfoDescEntities[0].decript.split(",") //详情图
+					console.log(this.spuInfoDescEntities)
 					this.skuSaleAttrValue = res.skuAttrResps //规格
 					this.skuInfoEntities = res.skuInfoEntities //颜色规格
 					let that = this
@@ -358,118 +382,6 @@
 						that.$set(item, "setindex", 0)
 					})
 					this.addgwc(this.skuSaleAttrValue[0].values[0], this.skuSaleAttrValue[1].values[0])
-					// console.log(this.skuSaleAttrValue)
-					// console.log(this.skuSaleAttrValue)
-					// var arr=[]
-					// this.skuSaleAttrValue.forEach(item=>{
-					// 	var obj={
-					// 		 skuName: '',
-
-					// 		 skuList: [],
-					// 	}
-					// 	obj.skuName=item.name
-
-					// 	item.values.forEach(it=>{
-
-					// 		obj.skuList.push(it.value)
-					// 	})
-
-					// 	arr.push(obj)
-					// })
-					// var arr1=[]
-					// res.skuInfoEntities.forEach(item=>{
-					// 	var obj1={
-					// 		 skuId: '4',
-					// 		skuValue: '成都市锦江区,2020年',
-					// 		skuImage:
-					// 		'https://miniprogram-img01.caishuib.com/wx15168444f005a4ab/material/image/202005135/3a014c2f42c1c46b.PNG',
-					// 		skuPrice: 80.0,
-					// 		skuStock: 1000,
-					// 	}
-					// obj1.skuId=item.skuId
-					// 	obj1.skuValue=item.skuName.replace(/ /g,",")
-					// 	obj1.skuImage=item.skuDefaultImg
-					// 	obj1.skuPrice=item.price
-					// 	obj1.skuStock=1000
-					// 	console.log(obj1.skuValue)
-					// 	arr1.push(obj1)
-					// })
-					// this.specifications=arr
-					// this.combinations=arr1
-					// console.log(arr,arr1)
-
-
-
-
-
-
-
-
-
-
-					// var arr=[]
-					// // var arr1=[]
-
-					// this.skuSaleAttrValue.forEach(item=>{
-					// 	var a=item.attrId
-
-					// 	let obj={}
-
-					// 	// res.skuSaleAttrValue.forEach(it=>{
-					// 	// 	if(item.skuName==it.skuName){
-
-					// 	// 		app.push(it.skuList)
-					// 	// 		item.skuList=app
-					// 	// 		console.log(item.skuList)
-					// 	// 	}
-					// 	// })
-					// 	// let obj={}
-					// 	// if(obj[item.attrId]){
-
-					// 	// }else{
-					// 	// 	console.log(obj[item.attrId])
-					// 	// 	obj[item.attrId].skuName=''
-					// 	// }
-
-
-					// 	// if(obj[])
-					// 	// obj.skuName=item.attrName
-					// 	// 	obj.skuList=item.attrValue
-					// 		// arr.push(item.attrName)
-					// 		// skuList: ['', ''],
-
-
-					// 	// if(obj[item.attrId]){
-					// 	// 	obj[item.attrId].skuName=item.attrName
-					// 	// 	obj[item.attrId].skuList=item.attrValue
-					// 	// }else{
-					// 	// 	obj[item.attrId].skuName=item.attrName
-					// 	// 	obj[item.attrId].skuList=item.attrValue
-					// 	// }
-
-					// 	// console.log(obj)
-					// 	// arr.push({skuName:item.attrName,skuList:item.attrValue})
-
-					// 	// console.log(item.attrName)
-					// })
-					// var a=this.skuSaleAttrValue.filter(item=>{
-					//  return	 item.attrName=="颜色"
-
-					// })
-					// var b=a.map( (value,index,array)=>{
-					// 	value.attrName=1
-					// 	// value.attrName
-					// })
-					// console.log(b)
-					// // var b=a.filter(item=>{
-					// // 	item.
-					// // })
-					// console.log(a)
-
-					// console.log(Array.from(new Set(arr)))
-
-
-					// console.log(res.spuInfoDescEntities[0].decript.split(","))
 				})
 			},
 			open(position) {
@@ -503,6 +415,29 @@
 </script>
 
 <style lang="scss" scoped>
+	.fwbzbottom{
+		margin-top: 50rpx;
+	}
+	.fwbzitem{
+		width: 100%;
+		padding: 30rpx;
+		border-bottom: 1px solid #E7E7E7;
+	}
+	.fuwubaozhangtop{
+		margin-bottom: 80rpx;
+		width: 100%;
+		font-size: 18px;
+		margin-top: 20rpx;
+		text-align: center;
+	}
+	.fuwubaozhang{
+		width: 100%;
+		height: 1000rpx;
+	}
+	image{
+		width: 100%;
+		height: 100%;
+	}
 	.activeshop {
 		color: white;
 		background-color: #FD6852;
@@ -510,19 +445,25 @@
 	}
 
 	.tuijianimg {
-		margin-top: 20px;
+		margin-top: 20rpx;
+	}
+	.tuijiantitle>image{
+		// width: 100%;
+		// height: 300px;
 	}
 
 	.tuijiantitle {
 		font-weight: 500;
 		color: #000000;
-		font-size: 30px;
+		margin-bottom: 60rpx;
+		font-size: 50rpx;
 		text-align: center;
 	}
 
 	.tuijian {
-		margin-top: 20px;
+		margin-top: 100rpx;
 		width: 100%;
+		height: 1000rpx;
 	}
 
 	.pingjiaitem {
@@ -556,12 +497,15 @@
 	}
 
 	.qishoushuoming {
-		height: 50rpx;
+		height: 60rpx;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		background-color: #FEFEFE;
 
+	}
+	.qishoushuoming>view{
+		line-height: 60rpx;
 	}
 
 	.baozhang {
@@ -570,15 +514,21 @@
 		background-color: #FEFEFE;
 	}
 
-	.baozhang>P {
+	.baozhang>view {
 		line-height: 50rpx;
 	}
 
 	.bupeisong {
-		margin-top: 5px;
+		margin-top: 5rpx;
 		width: 100%;
-
+        height: 150rpx;
 		background-color: #FEFEFE;
+	}
+	.bupeisong>view{
+		width: 50%;
+		margin-top: 10px;
+		margin: 0 auto;
+		
 	}
 
 	.peisong>p {
@@ -622,7 +572,8 @@
 		background-color: #FFF0D3;
 	}
 
-	.xiangqingyevip>p {
+	.xiangqingyevip>view {
+		font-size: 15px;
 		float: left;
 		text-align: center;
 		line-height: 120rpx;
@@ -671,14 +622,15 @@
 	.blacktext {
 
 		margin-top: 40rpx;
-
+        height: 50rpx;
 		width: 100%;
 		background-color: black;
 		display: flex;
 	}
 
-	.blacktext>P {
+	.blacktext>view{
 		color: #FFFFFF;
+		line-height: 50rpx;
 	}
 
 	.mix-icon {

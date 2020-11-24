@@ -24,7 +24,6 @@
 				</ul>
 			</scroll-view>
 			<scroll-view scroll-y="true" class="fenleiyeright" :style="{height:srollHeight+`px`}">
-
 				<!-- 分类轮播区 -->
 				<swiper class="fenleiyelunbo" circular indicator-dots autoplay>
 					<swiper-item>
@@ -47,7 +46,7 @@
 				<view class="fenleiyeshop" v-if="rightmenu"  v-for="(item ,index)  in  rightmenu"   :key="index">
 					<h2>{{item.name}}</h2>
 					<ul class="fenleiyeshopul">
-						<li v-for="(it,i) in item.children" @click="shoplist(it.catId)" :key="i">
+						<li v-for="(it,i) in item.children" @tap="shoplist(it.catId)" :key="i">
 							<view style="width: 100%; height: 70px; background-color: #FF9933;">
 								<img src="../../../static/category/R1.png" alt="">
 							</view>

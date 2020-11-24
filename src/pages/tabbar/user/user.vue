@@ -28,10 +28,10 @@
 						</view>
 						<span class="position">北京市</span>
 					</li>
-					<li>
+					<li  class="size14">
 						专属邀请码:<span>1316516516</span>
 					</li>
-					<li>
+					<li  class="size14">
 						推荐人:<span>阿泽</span>
 					</li>
 
@@ -61,10 +61,10 @@
 						</view>
 						<span class="position">***</span>
 					</li>
-					<li>
+					<li class="size14">
 						专属邀请码:<span>*****</span>
 					</li>
-					<li>
+					<li class="size14">
 						推荐人:<span>***</span>
 					</li>
 
@@ -92,33 +92,33 @@
 					</view>
 					<view class="shangchengitem">
 						<p style="line-height: 50px;">0.01</p>
-						<p>商城余额</p>
+						<p>可提现</p>
 					</view>
 					<view class="shangchengitem">
 						<p style="line-height: 50px;">0.01</p>
-						<p>商城余额</p>
+						<p>待结算</p>
 					</view>
 					<view class="shangchengitem">
 						<p style="line-height: 50px;">0.01</p>
-						<p>商城余额</p>
+						<p>已转出</p>
 					</view>
 				</li>
 				<li>
 					<view class="shangchengitem">
 						<p style="line-height: 50px;">0.01</p>
-						<p>商城余额</p>
+						<p>尊荣余额</p>
 					</view>
 					<view class="shangchengitem">
 						<p style="line-height: 50px;">0.01</p>
-						<p>商城余额</p>
+						<p>可提现</p>
 					</view>
 					<view class="shangchengitem">
 						<p style="line-height: 50px;">0.01</p>
-						<p>商城余额</p>
+						<p>待结算</p>
 					</view>
 					<view class="shangchengitem">
 						<p style="line-height: 50px;">0.01</p>
-						<p>商城余额</p>
+						<p>已转出</p>
 					</view>
 				</li>
 				<li>
@@ -260,9 +260,6 @@
 				uni.navigateTo({
 				    url: `/pages/tabbar/cart/one`
 				});
-				// if(num==1){
-				// 	// console.log(123)
-				// }
 			}
 		}
 

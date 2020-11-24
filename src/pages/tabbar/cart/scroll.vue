@@ -3,13 +3,13 @@
 	<view>
 		<scroll-view class="scroll-h" :scroll-x="true" :show-scrollbar="false" :style="{ borderColor: tabViewBorderColor }">
 			<view v-for="(tab, index) in tabBars" :key="tab.id" class="uni-tab-item" :data-current="index" @click="onTabTap">
-				<text
+				<view
 					class="uni-tab-item-title"
 					:class="tabIndex == index ? 'uni-tab-item-title-active' : ''"
 					:style="[tabIndex == index ? { color: tabItemTitleActiveColor, borderColor: tabItemTitleActiveBorderColor } : { color: tabItemTitleColor }]"
 				>
 					{{ tab.name }}
-				</text>
+				</view>
 			</view>
 		</scroll-view>
 	</view>
@@ -44,19 +44,23 @@ export default {
 		// tabItem标题选中文字颜色
 		tabItemTitleActiveColor: {
 			type: String,
-			default: '#007aff'
+			default: '#FA436A'
 		},
 
 		// tabItem标题选中文字底边颜色
 		tabItemTitleActiveBorderColor: {
 			type: String,
-			default: '#007aff'
+			default: '#FA436A'
 		}
 	},
 	data() {
 		return {
 			tabIndex:this.$store.state.type
 		};
+	},
+	onShow(){
+		console.log(123)
+	
 	},
 	methods: {	
 		onTabTap(e) {
@@ -89,7 +93,7 @@ scroll-view ::-webkit-scrollbar {
 }
 
 .uni-tab-item {
-	width: 200upx;
+	/* width: 200upx; */
 	display: inline-block;
 	flex-wrap: nowrap;
 }
@@ -97,7 +101,7 @@ scroll-view ::-webkit-scrollbar {
 .uni-tab-item-title {
 	color: #555;
 	font-size: 35upx;
-	width: 200upx;
+	/* width: 200upx; */
 	padding-left: 30upx;
 	padding-right: 30upx;
 	padding-bottom: 15upx;

@@ -1,5 +1,6 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	
 		// 首页页面
 		{
 			"path": "pages/tabbar/home/home",
@@ -116,6 +117,7 @@
 			}
 		}
 	
+	
 
 
 
@@ -124,13 +126,14 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-		// "usingComponents":{
-			  
-		// 	    "van-goods-action": "/wxcomponents/vant/dist/goods-action/index",
-		// 	    "van-goods-action-icon": "/wxcomponents/vant/dist//goods-action-icon/index",
-		// 	    "van-goods-action-button": "/wxcomponents/vant/dist//goods-action-button/index"
-		// }	
+		"backgroundColor": "#F8F8F8",
+		"usingComponents":{
+			    "van-goods-action": "/wxcomponents/vant/dist/goods-action/index",
+			    "van-goods-action-icon": "/wxcomponents/vant/dist//goods-action-icon/index",
+			    "van-goods-action-button": "/wxcomponents/vant/dist//goods-action-button/index",
+				"van-tab": "/wxcomponents/vant/dist/tab/index",
+				"van-tabs": "/wxcomponents/vant/dist/tabs/index"
+		}	
 
 	},
 	"tabBar": {

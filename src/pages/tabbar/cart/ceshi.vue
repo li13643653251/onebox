@@ -1,7 +1,7 @@
 <template>
 	<view class="ceshibox">
 		<!-- 地址 -->
-		<navigator class="address-section" v-if="address" >
+		<navigator class="address-section" v-if="address"  url="/pages/shouhuo/address" >
 
 			<view class="order-content">
 				<text class="mix-icon icon-dizhi1"></text>

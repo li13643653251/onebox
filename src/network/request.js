@@ -1,5 +1,5 @@
 
-const baseUrl = 'https://bird.ioliu.cn/v1?url=http://www.panchaotian.com:1035/'   
+const baseUrl ='http://www.panchaotian.com:1026/api/'   
 // http://www.panchaotian.com:1026/api/
 // https://bird.ioliu.cn/v1?url=http://www.panchaotian.com:1035/
 const request = (url = '', date = {}, type = 'GET', header = {

@@ -90,8 +90,6 @@
 					  this.getTotal(this.alllist)
 					console.log(this.alllist)
 				})
-				// console.log(666111)
-				 // return false;
 			}
 			
 
